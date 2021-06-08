@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  dicoding-backend:
+    build:
+      context: "./deployments"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/app:cached
+    restart: unless-stopped
